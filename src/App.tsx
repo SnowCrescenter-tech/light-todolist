@@ -4,6 +4,7 @@ import { BottomNav } from './components/BottomNav';
 import { TodoPage } from './pages/TodoPage';
 import { CalendarView } from './pages/CalendarView';
 import { SettingsPage } from './pages/Settings';
+import { TaskDetail } from './pages/TaskDetail';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <main className="flex-1 overflow-hidden relative">
             <Routes>
               <Route path="/" element={<TodoPage />} />
+              <Route path="/task/:id" element={<TaskDetail />} />
               <Route path="/calendar" element={<CalendarView />} />
               <Route path="/settings" element={<SettingsPage />} />
               <Route path="*" element={<Navigate to="/" replace />} />

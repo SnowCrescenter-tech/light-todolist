@@ -23,7 +23,8 @@ export function TaskInput() {
           completed: false,
           createdAt: new Date(),
           mode: 'offline',
-          dueDate
+          dueDate,
+          priority: 'medium'
         });
       } else {
         // 在线模式：调用 LLM
@@ -35,7 +36,8 @@ export function TaskInput() {
             completed: false,
             createdAt: new Date(),
             mode: 'online',
-            dueDate: t.dueDate ? new Date(t.dueDate) : undefined
+            dueDate: t.dueDate ? new Date(t.dueDate) : undefined,
+            priority: 'medium'
           })));
         } catch (error: any) {
           alert(`云端解析失败: ${error.message}\n已转为普通离线任务保存。`);
@@ -44,7 +46,8 @@ export function TaskInput() {
             title: input,
             completed: false,
             createdAt: new Date(),
-            mode: 'offline'
+            mode: 'offline',
+            priority: 'medium'
           });
         }
       }

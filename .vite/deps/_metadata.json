@@ -1,76 +1,82 @@
 {
-  "hash": "4336b44d",
+  "hash": "e37bf06f",
   "configHash": "49acd256",
-  "lockfileHash": "edc55310",
-  "browserHash": "9487559b",
+  "lockfileHash": "5713d35a",
+  "browserHash": "ce484fef",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "07c30eca",
+      "fileHash": "70eb48b5",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "dfdabeef",
+      "fileHash": "aecba6f7",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "b352d776",
+      "fileHash": "9ad34159",
       "needsInterop": true
     },
     "dexie-react-hooks": {
       "src": "../../node_modules/dexie-react-hooks/dist/dexie-react-hooks.mjs",
       "file": "dexie-react-hooks.js",
-      "fileHash": "977ad5c7",
+      "fileHash": "eff76bde",
       "needsInterop": false
     },
     "lucide-react": {
       "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
       "file": "lucide-react.js",
-      "fileHash": "e5781fb8",
+      "fileHash": "b1f30242",
       "needsInterop": false
     },
     "dexie": {
       "src": "../../node_modules/dexie/dist/modern/dexie.mjs",
       "file": "dexie.js",
-      "fileHash": "f1d66ed7",
+      "fileHash": "7aa1ff14",
       "needsInterop": false
     },
     "react-router-dom": {
       "src": "../../node_modules/react-router-dom/dist/index.mjs",
       "file": "react-router-dom.js",
-      "fileHash": "4d27e6fe",
+      "fileHash": "13e14332",
       "needsInterop": false
     },
     "clsx": {
       "src": "../../node_modules/clsx/dist/clsx.mjs",
       "file": "clsx.js",
-      "fileHash": "549aa5b7",
+      "fileHash": "f8f4021a",
       "needsInterop": false
     },
     "chrono-node": {
       "src": "../../node_modules/chrono-node/dist/esm/index.js",
       "file": "chrono-node.js",
-      "fileHash": "bb4a5476",
+      "fileHash": "fa32376d",
+      "needsInterop": false
+    },
+    "webdav": {
+      "src": "../../node_modules/webdav/dist/web/index.js",
+      "file": "webdav.js",
+      "fileHash": "7195340e",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-JMVEG3FK": {
-      "file": "chunk-JMVEG3FK.js"
-    },
     "chunk-4NL7JLB6": {
       "file": "chunk-4NL7JLB6.js"
     },
-    "chunk-TWJRYSII": {
-      "file": "chunk-TWJRYSII.js"
+    "chunk-JBJ6LC6B": {
+      "file": "chunk-JBJ6LC6B.js"
     },
-    "chunk-DC5AMYBS": {
-      "file": "chunk-DC5AMYBS.js"
+    "chunk-ODB75UNA": {
+      "file": "chunk-ODB75UNA.js"
+    },
+    "chunk-DWA4UIM3": {
+      "file": "chunk-DWA4UIM3.js"
     }
   }
 }

@@ -1,55 +1,76 @@
 {
-  "hash": "668e6a10",
+  "hash": "4336b44d",
   "configHash": "49acd256",
-  "lockfileHash": "eb26c5a3",
-  "browserHash": "24abb6a0",
+  "lockfileHash": "edc55310",
+  "browserHash": "9487559b",
   "optimized": {
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "d9c1df0c",
+      "fileHash": "07c30eca",
       "needsInterop": true
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "3cbe7777",
+      "fileHash": "dfdabeef",
       "needsInterop": true
     },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "7583d786",
+      "fileHash": "b352d776",
       "needsInterop": true
     },
     "dexie-react-hooks": {
       "src": "../../node_modules/dexie-react-hooks/dist/dexie-react-hooks.mjs",
       "file": "dexie-react-hooks.js",
-      "fileHash": "f2808acf",
+      "fileHash": "977ad5c7",
       "needsInterop": false
     },
     "lucide-react": {
       "src": "../../node_modules/lucide-react/dist/esm/lucide-react.js",
       "file": "lucide-react.js",
-      "fileHash": "3bab9648",
+      "fileHash": "e5781fb8",
       "needsInterop": false
     },
     "dexie": {
       "src": "../../node_modules/dexie/dist/modern/dexie.mjs",
       "file": "dexie.js",
-      "fileHash": "8c1d8a4f",
+      "fileHash": "f1d66ed7",
+      "needsInterop": false
+    },
+    "react-router-dom": {
+      "src": "../../node_modules/react-router-dom/dist/index.mjs",
+      "file": "react-router-dom.js",
+      "fileHash": "4d27e6fe",
+      "needsInterop": false
+    },
+    "clsx": {
+      "src": "../../node_modules/clsx/dist/clsx.mjs",
+      "file": "clsx.js",
+      "fileHash": "549aa5b7",
+      "needsInterop": false
+    },
+    "chrono-node": {
+      "src": "../../node_modules/chrono-node/dist/esm/index.js",
+      "file": "chrono-node.js",
+      "fileHash": "bb4a5476",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-32E4H3EV": {
-      "file": "chunk-32E4H3EV.js"
+    "chunk-JMVEG3FK": {
+      "file": "chunk-JMVEG3FK.js"
     },
     "chunk-4NL7JLB6": {
       "file": "chunk-4NL7JLB6.js"
     },
-    "chunk-G3PMV62Z": {
-      "file": "chunk-G3PMV62Z.js"
+    "chunk-TWJRYSII": {
+      "file": "chunk-TWJRYSII.js"
+    },
+    "chunk-DC5AMYBS": {
+      "file": "chunk-DC5AMYBS.js"
     }
   }
 }

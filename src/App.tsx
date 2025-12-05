@@ -1,19 +1,27 @@
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Layout } from './components/Layout';
-import { TaskList } from './components/TaskList';
-import { TaskInput } from './components/TaskInput';
+import { BottomNav } from './components/BottomNav';
+import { TodoPage } from './pages/TodoPage';
+import { CalendarView } from './pages/CalendarView';
+import { SettingsPage } from './pages/Settings';
 
 function App() {
   return (
-    <Layout>
-      <div className="flex flex-col h-full">
-        <div className="flex-1 overflow-y-auto pb-20">
-          <TaskList />
+    <BrowserRouter>
+      <Layout>
+        <div className="flex flex-col h-full">
+          <main className="flex-1 overflow-hidden relative">
+            <Routes>
+              <Route path="/" element={<TodoPage />} />
+              <Route path="/calendar" element={<CalendarView />} />
+              <Route path="/settings" element={<SettingsPage />} />
+              <Route path="*" element={<Navigate to="/" replace />} />
+            </Routes>
+          </main>
+          <BottomNav />
         </div>
-        <div className="fixed bottom-0 left-0 right-0 max-w-md mx-auto">
-          <TaskInput />
-        </div>
-      </div>
-    </Layout>
+      </Layout>
+    </BrowserRouter>
   );
 }
 

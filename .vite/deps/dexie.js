@@ -5,7 +5,7 @@ import {
   mergeRanges,
   rangesOverlap
 } from "./chunk-4NL7JLB6.js";
-import "./chunk-G3PMV62Z.js";
+import "./chunk-DC5AMYBS.js";
 export {
   Dexie$1 as Dexie,
   RangeSet,

@@ -11,7 +11,6 @@ export function TaskInput() {
   const [loading, setLoading] = useState(false);
   const { isListening, transcript, startListening, stopListening, isSupported } = useSpeechRecognition();
 
-  // 当语音转写更新时，同步更新输入框
   useEffect(() => {
     if (transcript) {
       setInput(transcript);
@@ -65,19 +64,19 @@ export function TaskInput() {
   };
 
   return (
-    <div className="border-t p-4 bg-gray-50 bg-opacity-95 backdrop-blur-sm shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
-      <form onSubmit={handleSubmit} className="flex gap-2 items-center">
+    <div className="flex-none border-t border-gray-100 bg-white/95 backdrop-blur-xl shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.02)] z-50">
+      <form onSubmit={handleSubmit} className="flex gap-2 items-center p-3 pb-2">
         <button
           type="button"
           onClick={() => setMode(mode === 'offline' ? 'online' : 'offline')}
-          className={`p-2 rounded-full transition-all duration-300 ${
+          className={`p-3 rounded-full transition-all active:scale-90 ${
             mode === 'offline'
-              ? 'bg-yellow-100 text-yellow-600 hover:bg-yellow-200 rotate-0'
-              : 'bg-purple-100 text-purple-600 hover:bg-purple-200 rotate-180'
+              ? 'bg-yellow-50 text-yellow-600 hover:bg-yellow-100'
+              : 'bg-purple-50 text-purple-600 hover:bg-purple-100'
           }`}
           title={mode === 'offline' ? '离线闪电模式' : '在线云脑模式'}
         >
-          {mode === 'offline' ? <Zap size={20} /> : <Cloud size={20} />}
+          {mode === 'offline' ? <Zap size={22} fill="currentColor" className="opacity-20" /> : <Cloud size={22} />}
         </button>
 
         <div className="flex-1 relative">
@@ -88,11 +87,13 @@ export function TaskInput() {
             placeholder={
                 isListening
                 ? "正在聆听..."
-                : mode === 'offline' ? "快速添加任务..." : "智能规划任务..."
+                : mode === 'offline' ? "添加任务..." : "AI 规划..."
             }
             disabled={loading}
-            className={`w-full px-4 py-2 pr-10 rounded-lg border focus:outline-none focus:ring-2 disabled:opacity-50 ${
-                isListening ? 'border-red-400 ring-2 ring-red-100 bg-red-50' : 'border-gray-300 focus:ring-blue-500'
+            className={`w-full h-11 pl-4 pr-10 rounded-2xl border text-base transition-all ${
+                isListening
+                ? 'border-red-400 bg-red-50 text-red-800 placeholder-red-400'
+                : 'border-gray-200 bg-gray-50 focus:bg-white focus:border-blue-500 focus:ring-4 focus:ring-blue-500/10'
             }`}
           />
           {isSupported && (
@@ -102,11 +103,11 @@ export function TaskInput() {
                 onMouseUp={stopListening}
                 onTouchStart={startListening}
                 onTouchEnd={stopListening}
-                className={`absolute right-2 top-1/2 -translate-y-1/2 p-1.5 rounded-full transition-colors ${
+                className={`absolute right-1 top-1/2 -translate-y-1/2 p-2 rounded-xl transition-all active:scale-90 ${
                     isListening ? 'text-red-500 bg-red-100' : 'text-gray-400 hover:text-gray-600'
                 }`}
             >
-                <Mic size={18} />
+                <Mic size={20} />
             </button>
           )}
         </div>
@@ -114,9 +115,13 @@ export function TaskInput() {
         <button
           type="submit"
           disabled={loading || !input.trim()}
-          className="p-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors disabled:bg-blue-300 disabled:cursor-not-allowed"
+          className={`p-3 rounded-full transition-all active:scale-90 ${
+            loading || !input.trim()
+            ? 'bg-gray-100 text-gray-400'
+            : 'bg-blue-600 text-white shadow-lg shadow-blue-600/30'
+          }`}
         >
-          {loading ? <Loader2 size={20} className="animate-spin" /> : <Send size={20} />}
+          {loading ? <Loader2 size={22} className="animate-spin" /> : <Send size={22} />}
         </button>
       </form>
     </div>

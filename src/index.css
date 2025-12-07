@@ -5,5 +5,22 @@
 @layer base {
   body {
     @apply antialiased text-gray-900 bg-gray-50;
+    /* 禁止移动端双击缩放和长按选中文本 */
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+@layer utilities {
+  /* iOS 安全区域适配 */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .pt-safe {
+    padding-top: env(safe-area-inset-top);
+  }
+  .h-safe-screen {
+    height: 100vh; /* Fallback */
+    height: 100dvh;
   }
 }

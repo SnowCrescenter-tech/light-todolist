@@ -15,6 +15,11 @@ export default defineConfig({
         short_name: 'IntelliTodo',
         description: '你的数据，你的AI，你的节奏',
         theme_color: '#ffffff',
+        background_color: '#f9fafb', // bg-gray-50
+        display: 'standalone',
+        orientation: 'portrait',
+        scope: '/',
+        start_url: '/',
         icons: [
           {
             src: 'pwa-192x192.png',
@@ -25,6 +30,12 @@ export default defineConfig({
             src: 'pwa-512x512.png',
             sizes: '512x512',
             type: 'image/png'
+          },
+          {
+            src: 'pwa-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any maskable'
           }
         ]
       }
